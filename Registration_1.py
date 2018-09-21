@@ -2,12 +2,12 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-class PythonOrgSearch(unittest.TestCase):
+class RegistrationFirstStep(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Firefox()
 
-    def test_search_in_python_org(self):
+    def test_first_step(self):
         driver = self.driver
         driver.get("https://moneyman:1005@qa-delivery-br-master.moneyman.ru/registration-gf/static/#/step1")
         
