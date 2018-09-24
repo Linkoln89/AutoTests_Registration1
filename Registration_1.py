@@ -25,6 +25,14 @@ class RegistrationFirstStep(unittest.TestCase):
         
         elem = driver.find_element_by_name ('nextBtn'). click()
 
+
+        elem = driver.find_element_by_name("confirmationCode")
+        elem.send_keys("1111")
+
+        elem = driver.find_element_by_class ('form__checkbox-box'). click()
+
+        elem = driver.find_element_by_name ('confirmMobileBtn'). click()
+
 if __name__ == "__main__":
     unittest.main()
 
