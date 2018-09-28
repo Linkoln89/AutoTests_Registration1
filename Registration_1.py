@@ -1,6 +1,9 @@
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
 
 class RegistrationFirstStep(unittest.TestCase):
 
@@ -23,17 +26,20 @@ class RegistrationFirstStep(unittest.TestCase):
         elem = driver.find_element_by_name("email")
         elem.send_keys("tetete777777@mail.ru")
         
-        elem = driver.find_element_by_name ('nextBtn'). click()
+        elem = driver.find_element_by_name('nextBtn'). click()
 
+        elem = driver.switch_to_active_element
 
-        elem = driver.find_element_by_name("confirmationCode")
+        elem = driver.find_element_by_name ("confirmationCode")
         elem.send_keys("1111")
 
         elem = driver.find_element_by_class ('form__checkbox-box'). click()
 
         elem = driver.find_element_by_name ('confirmMobileBtn'). click()
 
+        elem = driver.switch_to_active_element
+
 if __name__ == "__main__":
     unittest.main()
 
-print('Done!!')
+#print('Done!!')
